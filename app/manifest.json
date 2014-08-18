@@ -1,0 +1,26 @@
+{
+    "name": "Chrome Exhibition Extension",
+    "description": "Chrome App for ... Exhibition Touchscreen kiosk",
+    "version": "9",
+    "manifest_version": 2,
+    "default_locale": "en",
+    "author": "David Kelly - david.d.kelly@nuigalway.ie | @davkell",
+    "kiosk_enabled": true,
+    "minimum_chrome_version": "36",
+    "offline_enabled": true,
+    "permissions": [
+        "system.display",
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/background.js"
+            ]
+        }
+    }
+}

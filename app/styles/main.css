@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#slideshow h3 {
+  display: block;
+  color: #fff;
+  font-weight: normal;
+  line-height: 3em;
+  text-indent: 1em;
+  padding: 0 2em;
+  font-size: 2em;
+  margin: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  background: rgba(50, 50, 50, 0.8);
+}
+#arrow_left,
+#arrow_right {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+}
+#arrow_left {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+}
+#arrow_right {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.mc-hide-scrolls {
+  overflow: hidden;
+}
+body .mc-cycle {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+div.mc-image {
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.mc-old-browser .mc-image {
+  overflow: hidden;
+}
+/*******************************************************************************
+            Touch Icon 
+*******************************************************************************/
+.touch-icon-wrap {
+  -webkit-transform: scale(1.5);
+  margin-top: -80px;
+}
+.touch-icon-wrap {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 .6em;
+  padding: 2em;
+}
+.touch-icon {
+  display: inline-block;
+  font-size: 0px;
+  margin: 2px 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: #0cf;
+}
+.touch-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+.touch-icon:before {
+  background-color: #0cf;
+}
+/* Sonar Effect */
+.touch-icon-effect .touch-icon {
+  background: rgba(0, 204, 255, 0.7);
+  transition: -webkit-transform ease-out 0.1s, background 0.5s;
+  transition: transform ease-out 0.1s, background 0.5s;
+}
+.touch-icon-effect .touch-icon:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.7);
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+}
+.touch-icon-effect .touch-icon {
+  background: rgba(0, 204, 255, 0.05);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  color: #fff;
+}
+.touch-icon-effect .touch-icon {
+  -webkit-animation: sonarEffect 4s ease-out 75ms infinite;
+  animation: sonarEffect 4s ease-out 75ms infinite;
+}
+/* Chrome, mobile browser support  */
+@keyframes "sonarEffect" {
+  0% {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+  }
+  50% {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.7), 0 0 10px 10px #000000, 0 0 0 10px rgba(0, 204, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.7), 0 0 10px 10px #000000, 0 0 0 10px rgba(0, 204, 255, 0.9);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes "sonarEffect" {
+  0% {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+  }
+  40% {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.7), 0 0 10px 10px #000000, 0 0 0 10px rgba(0, 204, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(0, 204, 255, 0.7), 0 0 10px 10px #000000, 0 0 0 10px rgba(0, 204, 255, 0.9);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}

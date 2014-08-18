@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        
+        <!-- Main Styles -->
+        <link rel="stylesheet" href="styles/main.css">
+      
+    </head>
+    <body>
+        <main class="fullscreen">
+            <section class="content">
+                
+                <a href="#" id="arrow_left">
+                    <div class="touch-icon-wrap touch-icon-effect">
+                        <div class="touch-icon"></div>
+                    </div>
+                    <span class="sr-only">
+                        Previous
+                    </span>
+
+                </a>
+                <a href="#" id="arrow_right">
+                    <div class="touch-icon-wrap touch-icon-effect">
+                        <div class="touch-icon" title="Next"></div>
+                    </div>
+                   <span class="sr-only">
+                        Next
+                    </span> 
+                </a>
+
+                <div id="slideshow">
+                    <figure class="slide">
+                        <img src="images/image-1.jpg" alt="test" />
+                        <figcaption class="in-slide-content">
+                            <h3>An image by a photographer 1</h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/image-2.jpg" alt="test" />
+                        <figcaption class="in-slide-content">
+                            <h3>An image by a photographer 2</h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="images/image-1.jpg" alt="test" />
+                        <figcaption class="in-slide-content">
+                            <h3>An image by a photographer 3</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+
+
+            </section>
+        </main>
+    
+
+        
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+        <script src="bower_components/hammerjs/hammer.min.js"></script>
+        <script src="bower_components/jquery-hammerjs/jquery.hammer.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+       <!-- build:js scripts/index.js -->
+        <script src="scripts/plugins.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
